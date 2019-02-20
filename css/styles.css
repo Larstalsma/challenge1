@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css?family=Iceland');
+
+body{
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-gap: 0;
+
+	grid-template-areas: 
+	"header2"
+	"header1"
+	"main"
+	"art1"
+	"art2";
+
+	font-family: 'Iceland', sans-serif;
+	font-weight: bold;
+	box-sizing: border-box;
+	background-color: #e8e9ed;
+	color: #005288;
+}
+
+#header1{
+	grid-area: header1;
+	text-align: center;
+}
+
+#header2{
+	grid-area: header2;
+	margin-left: 34%;
+	margin-right: auto;
+}
+
+#main{
+	grid-area: main;
+	padding: 2em 0;
+	height: 300px;
+	border-bottom: 1px solid rgba(29, 41, 81, 0.5);
+}
+
+#art1{
+	grid-area: art1;
+	padding: 2em 0;
+	height: 300px;
+	border-bottom: 1px solid rgba(29, 41, 81, 0.5);
+}
+
+#art2{
+	grid-area: art2;
+	height: 300px;
+	padding: 2em 0 0.5em 0;
+}
+
+#SpaceXLogo{
+	width: 8em;
+	padding-top: 15px;
+}
+
+
+/* -------------------------------------------------------------------------TABLET------------------------------------------------------------------------- */
+
+
+@media only screen and (min-width: 720px) and (max-width: 1024px){
+
+	body{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 0;
+
+		grid-template-areas: 
+		"header1 header2"
+		"main main"
+		"art1 art1"
+		"art2 art2";
+	}
+
+	#SpaceXLogo{
+		width: 12em;
+		float: right;
+	}
+
+	#header1{
+		grid-area: header1;
+		text-align: left;
+		font-size: 1.2em;
+		padding-left: 1em;
+		padding-top: 01em;
+	}
+
+	#header2{
+		grid-area: header2;
+		padding-top: 1.2em;
+		padding-right: 1em;
+		margin-left: auto;
+		margin-right: 0;
+	}
+}
+
+
+/* -------------------------------------------------------------------------LAPTOP------------------------------------------------------------------------- */
+
+
+@media only screen and (min-width: 1025px) and (max-width: 1439px){
+
+	body{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 3fr 3fr;
+		grid-gap: 1em;
+
+		grid-template-areas: 
+		"header1 header2"
+		"main main"
+		"art1 art2";
+	}
+
+	#art1{
+		border-right: 1px solid rgba(29, 41, 81, 0.5);
+		border-bottom: 0;
+		padding: 1em;
+		padding-right: 3em;
+	}
+
+	#header1{
+		font-size: 2em;
+	}
+
+	#SpaceXLogo{
+		width: 17em;
+		padding-top: 2em;
+	}
+
+	#main{
+		padding: 1em 2em 3em 2em;
+	}
+	
+}
+
+
+/* -------------------------------------------------------------------------DESKTOP------------------------------------------------------------------------- */
+
+
+@media only screen and (min-width: 1440px){
+	
+	body{
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: 1fr 6fr 6fr;
+		grid-gap: 1.5em;
+
+		grid-template-areas:
+			"header1 header1 header2"
+	        "main main art1"
+	        "main main art2";
+
+	    margin: 0 2em;
+	}
+
+	#header1{
+		grid-area: header1;
+		font-size: 1em;
+	}
+
+	#ITSI{
+		margin: 18px 0 0 0;
+		float: left;
+		font-size: 2.5em;
+	}
+
+	#header2{
+		grid-area: header2;
+	}
+
+	#main{
+		grid-area: main;
+		height: auto;
+		border-right: 1px solid rgba(29, 41, 81, 0.5);
+		border-bottom: 0;
+		padding: 2em;
+	}
+
+	#art1{
+		grid-area: art1;
+	}
+
+	#art2{
+		grid-area: art2;
+		padding: 0 0 2em 0;
+	}
+
+	#SpaceXLogo{
+		width: 18em;
+		float: right;
+	}
+}
